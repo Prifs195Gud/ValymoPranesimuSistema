@@ -1,25 +1,28 @@
 {
     "apartments": [
         {
-            "name": "TEST AP #668",
+            "name": "TEST AP #561",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis orci eros. Ut odio arcu, commodo et dui et, imperdiet congue arcu. Proin id odio luctus, iaculis justo at, sodales mi. Duis feugiat, augue ut pharetra tincidunt, sapien sem maximus erat, ac blandit elit neque a nibh. Curabitur vehicula lacus sed elit sollicitudin, sed vehicula metus volutpat.",
-            "address": "Lorem ipsum dolor 76 g.",
-            "floorArea": 52.0,
-            "floor": 8
+            "address": "Lorem ipsum dolor 47 g.",
+            "floorArea": 37.0,
+            "floor": 9,
+            "apartmentStatus": 1
         },
         {
-            "name": "TEST AP #520",
+            "name": "TEST AP #242",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis orci eros. Ut odio arcu, commodo et dui et, imperdiet congue arcu. Proin id odio luctus, iaculis justo at, sodales mi. Duis feugiat, augue ut pharetra tincidunt, sapien sem maximus erat, ac blandit elit neque a nibh. Curabitur vehicula lacus sed elit sollicitudin, sed vehicula metus volutpat.",
-            "address": "Lorem ipsum dolor 50 g.",
-            "floorArea": 14.0,
-            "floor": 2
-        },
-        {
-            "name": "TEST AP #360",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis orci eros. Ut odio arcu, commodo et dui et, imperdiet congue arcu. Proin id odio luctus, iaculis justo at, sodales mi. Duis feugiat, augue ut pharetra tincidunt, sapien sem maximus erat, ac blandit elit neque a nibh. Curabitur vehicula lacus sed elit sollicitudin, sed vehicula metus volutpat.",
-            "address": "Lorem ipsum dolor 12 g.",
+            "address": "Lorem ipsum dolor 28 g.",
             "floorArea": 75.0,
-            "floor": 1
+            "floor": 3,
+            "apartmentStatus": 3
+        },
+        {
+            "name": "TEST AP #508",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis orci eros. Ut odio arcu, commodo et dui et, imperdiet congue arcu. Proin id odio luctus, iaculis justo at, sodales mi. Duis feugiat, augue ut pharetra tincidunt, sapien sem maximus erat, ac blandit elit neque a nibh. Curabitur vehicula lacus sed elit sollicitudin, sed vehicula metus volutpat.",
+            "address": "Lorem ipsum dolor 56 g.",
+            "floorArea": 64.0,
+            "floor": 4,
+            "apartmentStatus": 4
         }
     ]
 }

@@ -6,7 +6,7 @@ public class PanelUI : MonoBehaviour
 {
     [SerializeField] GameObject graphics = null;
 
-    private void Awake()
+    private void Start()
     {
         Enable(false);
     }

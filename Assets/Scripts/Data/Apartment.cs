@@ -4,7 +4,8 @@ using UnityEngine;
 
 public enum ApartmentStatus
 {
-    Ready = 0, // Clean
+    None,
+    Ready, // Clean
     NotReady, // Not clean
     Occupied,
     Blocked, // Removed from use
@@ -19,7 +20,7 @@ public class Apartment
     public string address;
     public float floorArea; // m^2
     public int floor;
-    ApartmentStatus apartmentStatus;
+    public ApartmentStatus apartmentStatus;
 
     Texture2D picture;
 
@@ -32,7 +33,7 @@ public class Apartment
             address = "Lorem ipsum dolor " + Random.Range(1, 100) + " g.",
             floorArea = Random.Range(10, 100),
             floor = Random.Range(1, 10),
-            apartmentStatus = (ApartmentStatus)(Random.Range(0, 4)),
+            apartmentStatus = (ApartmentStatus)(Random.Range(1, 5)),
             picture = null
 
         };

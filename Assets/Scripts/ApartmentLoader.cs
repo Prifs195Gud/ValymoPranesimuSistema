@@ -9,9 +9,13 @@ public class ApartmentLoader : MonoBehaviour
     [SerializeField] GameObject prefab = null;
     [SerializeField] Transform apartmentHolder = null;
 
+    List<Apartment> apartmentList = new List<Apartment>();
+    List<GameObject> apartmentElements = new List<GameObject>();
+
     void Start()
     {
-        DisplayApartments(FetchApartments());
+        apartmentList = FetchApartments();
+        DisplayApartments(apartmentList);
     }
 
     List<Apartment> FetchApartments()
@@ -25,6 +29,29 @@ public class ApartmentLoader : MonoBehaviour
         {
             ApartmentUI apUI = Instantiate(prefab, apartmentHolder).GetComponent<ApartmentUI>();
             apUI.LoadApartment(apartments[i]);
+            apartmentElements.Add(apUI.gameObject);
         }
+    }
+
+    public void FilterApartments()
+    {
+        ClearApartments();
+        ApartmentStatus apartmentStatus = FilterUI.singleton.GetFilterApartmentStatus();
+        List<Apartment> filteredApartments = new List<Apartment>(apartmentList);
+        if(apartmentStatus != ApartmentStatus.None)
+            for (int i = 0; i < filteredApartments.Count; i++)
+                if (filteredApartments[i].apartmentStatus != apartmentStatus)
+                {
+                    filteredApartments.RemoveAt(i);
+                    i--;
+                }
+        DisplayApartments(filteredApartments);
+    }
+
+    void ClearApartments()
+    {
+        for(int i = 0; i < apartmentElements.Count; i++)
+            Destroy(apartmentElements[i]);
+        apartmentElements.Clear();
     }
 }
