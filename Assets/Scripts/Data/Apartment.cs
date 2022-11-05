@@ -13,7 +13,7 @@ public enum ApartmentStatus
 }
 
 [System.Serializable]
-public class Apartment
+public class Apartment : System.IComparable<Apartment>
 {
     public string name;
     public string description;
@@ -49,6 +49,14 @@ public class Apartment
             newList.Add(GenerateApartment());
 
         return newList;
+    }
+
+    public int CompareTo(Apartment compareApartment)
+    {
+        if (this.name == null)
+            return 1;
+        else
+            return this.name.CompareTo(compareApartment.name);
     }
 }
 
