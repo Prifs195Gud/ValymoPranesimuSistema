@@ -16,11 +16,11 @@ public class Generator : MonoBehaviour
         if(generateApartments)
         {
             generateApartments = false;
-            GenerateAparments();
+            GenerateApartments();
         }
     }
 
-    void GenerateAparments()
+    void GenerateApartments()
     {
         ApartmentBundle aps = new ApartmentBundle();
         aps.apartments = Apartment.GenerateApartmentList(aparmentsToGenerate).ToArray();
