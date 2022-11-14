@@ -54,4 +54,16 @@ public class ApartmentLoader : MonoBehaviour
             Destroy(apartmentElements[i]);
         apartmentElements.Clear();
     }
+
+    public void SortApartments()
+    {
+        ClearApartments();
+        ApartmentSortingOption apartmentSortingOption = SortUI.singleton.GetSortApartmentOption();
+        List<Apartment> sortedApartments = new List<Apartment>(apartmentList);
+        if (apartmentSortingOption == ApartmentSortingOption.NameAscending)
+            sortedApartments.Sort();
+        else if (apartmentSortingOption == ApartmentSortingOption.NameDescending)
+            sortedApartments.Sort((precedingApartment, succeedingApartment) => succeedingApartment.CompareTo(precedingApartment));
+        DisplayApartments(sortedApartments);
+    }
 }
