@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ApartmentLoader : MonoBehaviour
 {
-    [SerializeField] TextAsset apartmentData = null;
+    //[SerializeField] TextAsset apartmentData = null;
     [SerializeField] GameObject prefab = null;
     [SerializeField] Transform apartmentHolder = null;
 
@@ -26,7 +26,8 @@ public class ApartmentLoader : MonoBehaviour
     void OnApartmentFetch(List<Apartment> apartments)
     {
         Debug.Log("Amount of aps: {" + apartments.Count + "}");
-        DisplayApartments(apartments);
+        apartmentList = apartments;
+        DisplayApartments(apartmentList);
     }
 
     void DisplayApartments(List<Apartment> apartments)
