@@ -1873,7 +1873,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Login ID
+  m_Text: Email
 --- !u!222 &318303943
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3206,6 +3206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 553790875}
+  - component: {fileID: 553790876}
   m_Layer: 5
   m_Name: Register
   m_TagString: Untagged
@@ -3242,6 +3243,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &553790876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553790874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595279f2308369e4b9e49958b501accc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pageManager: {fileID: 1123873882}
+  emailInput: {fileID: 287409486}
+  passInput: {fileID: 1819320485}
 --- !u!1001 &557724204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6080,14 +6096,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1123873882}
-        m_TargetAssemblyTypeName: PageManager, Assembly-CSharp
-        m_MethodName: SwitchPage
-        m_Mode: 3
+      - m_Target: {fileID: 1716330037}
+        m_TargetAssemblyTypeName: SignInUI, Assembly-CSharp
+        m_MethodName: SignIn
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6901,6 +6917,101 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171869061}
+  m_CullTransparentMesh: 1
+--- !u!1 &1240364872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1240364873}
+  - component: {fileID: 1240364876}
+  - component: {fileID: 1240364875}
+  - component: {fileID: 1240364874}
+  m_Layer: 5
+  m_Name: Wrong
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1240364873
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240364872}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.49999997, y: 0.49999997, z: 0.49999997}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1716330036}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -526}
+  m_SizeDelta: {x: 581.1, y: 137}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1240364874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240364872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c13de904eeaca04688090a23e10befd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myText: {fileID: 1240364875}
+  timeOn: 2
+--- !u!114 &1240364875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240364872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9056604, g: 0.16660735, b: 0.16660735, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 94
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 133
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: Wrong password or email!
+--- !u!222 &1240364876
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240364872}
   m_CullTransparentMesh: 1
 --- !u!1 &1251414904
 GameObject:
@@ -8318,6 +8429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1499523277}
+  - component: {fileID: 1499523278}
   m_Layer: 5
   m_Name: ApartmentList
   m_TagString: Untagged
@@ -8349,6 +8461,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1499523278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499523276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abda0133c09e30b4b8d8239759c850f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollLayout: {fileID: 1170483523}
+  scrollLockObjs:
+  - {fileID: 38528086}
+  - {fileID: 112567724}
+  mouseScrollSpeed: 500000
 --- !u!1 &1500341458
 GameObject:
   m_ObjectHideFlags: 0
@@ -9765,7 +9894,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1694161901}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 553790876}
+        m_TargetAssemblyTypeName: RegisterUI, Assembly-CSharp
+        m_MethodName: Register
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1694161901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10044,6 +10185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1708795053}
   - component: {fileID: 1708795054}
+  - component: {fileID: 1708795055}
   m_Layer: 0
   m_Name: Generator
   m_TagString: Untagged
@@ -10080,6 +10222,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aparmentsToGenerate: 3
   generateApartments: 0
+--- !u!114 &1708795055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708795052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d30dec76fd8c474d9652a67e5af8f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apiUrl: https://valymopranesimuapi20221122202627.azurewebsites.net
 --- !u!1 &1716330035
 GameObject:
   m_ObjectHideFlags: 0
@@ -10089,6 +10244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1716330036}
+  - component: {fileID: 1716330037}
   m_Layer: 5
   m_Name: LogIn
   m_TagString: Untagged
@@ -10114,6 +10270,7 @@ RectTransform:
   - {fileID: 1018064208}
   - {fileID: 787760359}
   - {fileID: 236285868}
+  - {fileID: 1240364873}
   m_Father: {fileID: 1123873881}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10122,6 +10279,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1716330037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716330035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f18b0f178d8964f8bb3a2afbd4ee68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pageManager: {fileID: 1123873882}
+  errorText: {fileID: 1240364874}
+  inputID: {fileID: 1992086209}
+  inputPass: {fileID: 1132098410}
 --- !u!1 &1730638132
 GameObject:
   m_ObjectHideFlags: 0
@@ -11244,7 +11417,7 @@ GameObject:
   - component: {fileID: 1992086210}
   - component: {fileID: 1992086209}
   m_Layer: 5
-  m_Name: LoginID
+  m_Name: LoginEmail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11315,13 +11488,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1992086210}
   m_TextComponent: {fileID: 208779871}
   m_Placeholder: {fileID: 318303942}
-  m_ContentType: 2
+  m_ContentType: 6
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 4
+  m_KeyboardType: 7
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 1
+  m_CharacterValidation: 5
   m_CharacterLimit: 32
   m_OnSubmit:
     m_PersistentCalls:

@@ -58,10 +58,44 @@ public class Apartment : System.IComparable<Apartment>
         else
             return this.name.CompareTo(compareApartment.name);
     }
+
+    public static Apartment ReadFromAPI(APIApartment ap)
+    {
+        Apartment newAp = new Apartment
+        {
+            name = ap.name,
+            description = ap.description,
+            address = ap.address,
+            floorArea = ap.floorArea,
+            floor = ap.floor,
+            apartmentStatus = (ApartmentStatus)ap.status,
+            picture = null
+        };
+
+        return newAp;
+    }
 }
 
 [System.Serializable]
 public class ApartmentBundle
 {
     public Apartment[] apartments;
+}
+
+[System.Serializable]
+public class APIApartment
+{
+    public int apartmentId;
+    public string name;
+    public string description;
+    public string address;
+    public float floorArea;
+    public int floor;
+    public int status;
+}
+
+[System.Serializable]
+public class APIApartmentBundle
+{
+    public APIApartment[] APIApartments;
 }

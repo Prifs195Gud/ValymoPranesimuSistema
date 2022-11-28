@@ -14,13 +14,19 @@ public class ApartmentLoader : MonoBehaviour
 
     void Start()
     {
-        apartmentList = FetchApartments();
-        DisplayApartments(apartmentList);
+        FetchApartments();
     }
 
-    List<Apartment> FetchApartments()
+    void FetchApartments()
     {
-        return ((ApartmentBundle)FileReadWrite.ReadFromFile(apartmentData, typeof(ApartmentBundle))).apartments.ToList();
+        //return ((ApartmentBundle)FileReadWrite.ReadFromFile(apartmentData, typeof(ApartmentBundle))).apartments.ToList();
+        APICaller.GetApartments(OnApartmentFetch);
+    }
+
+    void OnApartmentFetch(List<Apartment> apartments)
+    {
+        Debug.Log("Amount of aps: {" + apartments.Count + "}");
+        DisplayApartments(apartments);
     }
 
     void DisplayApartments(List<Apartment> apartments)
