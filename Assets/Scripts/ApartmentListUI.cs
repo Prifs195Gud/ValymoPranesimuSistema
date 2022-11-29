@@ -36,7 +36,8 @@ public class ApartmentListUI : MonoBehaviour
         if(Input.touchCount > 0)
             pos.y += Input.touches[0].deltaPosition.y;
 
-        float maxPos = scrollObjLocalOrigin.y + scrollLayout.preferredHeight - 1750f;
+        float offset = scrollLayout.preferredHeight - 1750f;
+        float maxPos = scrollObjLocalOrigin.y + Mathf.Clamp(offset, 0, offset);
 
         if (pos.y < scrollObjLocalOrigin.y)
             pos.y = scrollObjLocalOrigin.y;
