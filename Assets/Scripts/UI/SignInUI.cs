@@ -10,18 +10,25 @@ public class SignInUI : MonoBehaviour
     [SerializeField] InputField inputID = null;
     [SerializeField] InputField inputPass = null;
 
+    string lastSignInEmail = "";
     public void SignIn()
     {
-        if (inputID.text == "a" && inputPass.text == "a") // backdoor
+        lastSignInEmail = inputID.text;
+
+        if (lastSignInEmail == "a" && inputPass.text == "a") // backdoor
             OnSignInCallback(true);
         else
-            APICaller.CanSignIn(inputID.text, inputPass.text, OnSignInCallback);
+            APICaller.CanSignIn(lastSignInEmail, inputPass.text, OnSignInCallback);
     }
 
     void OnSignInCallback(bool success)
     {
         if (success)
+        {
+            UserLogInData.isUserLoggedIn = true;
+            UserLogInData.userEmail = lastSignInEmail;
             pageManager.SwitchPage(2);
+        }
         else
             errorText.Activate();
     }

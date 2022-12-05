@@ -4,6 +4,6 @@ public class NotificationSender : MonoBehaviour
 {
     public void SendNotification()
     {
-        NotificationManager.SendNotification();
+        NotificationManager.SendNotification("TEST");
     }
 }

@@ -15,15 +15,13 @@ public static class NotificationManager
         };
 
         AndroidNotificationCenter.RegisterNotificationChannel(channel);
-
-        SendNotification();
     }
 
-    public static void SendNotification()
+    public static void SendNotification(string text)
     {
         AndroidNotification notification = new AndroidNotification
         {
-            Title = "Your Title",
+            Title = "New Message!",
             Text = "Your Text",
             FireTime = System.DateTime.Now
         };

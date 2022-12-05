@@ -46,4 +46,10 @@ public class ApartmentListUI : MonoBehaviour
 
         scrollLayout.transform.localPosition = pos;
     }
+
+    public void LogOff()
+    {
+        UserLogInData.isUserLoggedIn = false;
+        UserLogInData.userEmail = "";
+    }
 }

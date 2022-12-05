@@ -8,6 +8,8 @@ public class ApartmentViewUI : MonoBehaviour
 
     [SerializeField] PageManager pageManager = null;
 
+    [SerializeField] Dropdown stateInput = null;
+
     public static ApartmentViewUI singleton;
 
     private void Awake()
@@ -15,8 +17,11 @@ public class ApartmentViewUI : MonoBehaviour
         singleton = this;
     }
 
+    Apartment viewApartment;
     public void ShowApartmentInfo(Apartment ap)
     {
+        viewApartment = new Apartment(ap);
+
         apartmentName.text = ap.name;
         apartmentInfo.text = "Address: " + ap.address 
             + "\nDescription: " + ap.description
@@ -25,8 +30,18 @@ public class ApartmentViewUI : MonoBehaviour
         pageManager.SwitchPage(5);
     }
 
-    public void MarkForCleaning()
+    public void ChangeState()
     {
+        APICaller.ChangeApartmentStatus(viewApartment.id, (ApartmentStatus)stateInput.value, OnApartmentModify);
+    }
 
+    void OnApartmentModify(bool success)
+    {
+        if (success)
+        {
+            viewApartment.apartmentStatus = (ApartmentStatus)stateInput.value;
+            ApartmentLoader.singleton.ModifyApartment(viewApartment);
+            ShowApartmentInfo(viewApartment);
+        }
     }
 }

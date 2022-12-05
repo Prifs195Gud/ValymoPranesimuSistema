@@ -15,6 +15,8 @@ public enum ApartmentStatus
 [System.Serializable]
 public class Apartment : System.IComparable<Apartment>
 {
+    public int id;
+
     public string name;
     public string description;
     public string address;
@@ -24,10 +26,27 @@ public class Apartment : System.IComparable<Apartment>
 
     Texture2D picture;
 
+    public Apartment()
+    {
+    }
+
+    public Apartment(Apartment ap)
+    {
+        id = ap.id;
+        name = ap.name;
+        description = ap.description;
+        address = ap.address;
+        floorArea = ap.floorArea;
+        floor = ap.floor;
+        apartmentStatus = ap.apartmentStatus;
+        picture = ap.picture;
+    }
+
     public static Apartment GenerateApartment()
     {
         Apartment newAp = new Apartment
         {
+            id = 0,
             name = "TEST AP #" + Random.Range(0, 1000),
             description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis orci eros. Ut odio arcu, commodo et dui et, imperdiet congue arcu. Proin id odio luctus, iaculis justo at, sodales mi. Duis feugiat, augue ut pharetra tincidunt, sapien sem maximus erat, ac blandit elit neque a nibh. Curabitur vehicula lacus sed elit sollicitudin, sed vehicula metus volutpat.",
             address = "Lorem ipsum dolor " + Random.Range(1, 100) + " g.",
@@ -53,16 +72,17 @@ public class Apartment : System.IComparable<Apartment>
 
     public int CompareTo(Apartment compareApartment)
     {
-        if (this.name == null)
+        if (name == null || name == "")
             return 1;
         else
-            return this.name.CompareTo(compareApartment.name);
+            return name.CompareTo(compareApartment.name);
     }
 
     public static Apartment ReadFromAPI(APIApartment ap)
     {
         Apartment newAp = new Apartment
         {
+            id = ap.apartmentId,
             name = ap.name,
             description = ap.description,
             address = ap.address,
@@ -70,6 +90,22 @@ public class Apartment : System.IComparable<Apartment>
             floor = ap.floor,
             apartmentStatus = (ApartmentStatus)ap.status,
             picture = null
+        };
+
+        return newAp;
+    }
+
+    public static APIApartment WriteAPIObject(Apartment ap)
+    {
+        APIApartment newAp = new APIApartment
+        {
+            apartmentId = ap.id,
+            name = ap.name,
+            description = ap.description,
+            address = ap.address,
+            floorArea = ap.floorArea,
+            floor = ap.floor,
+            status = (int)ap.apartmentStatus
         };
 
         return newAp;

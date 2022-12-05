@@ -12,6 +12,13 @@ public class ApartmentLoader : MonoBehaviour
     List<Apartment> apartmentList = new List<Apartment>();
     List<GameObject> apartmentElements = new List<GameObject>();
 
+    public static ApartmentLoader singleton;
+
+    private void Awake()
+    {
+        singleton = this;
+    }
+
     void Start()
     {
         FetchApartments();
@@ -30,8 +37,20 @@ public class ApartmentLoader : MonoBehaviour
         DisplayApartments(apartmentList);
     }
 
+    public void ModifyApartment(Apartment ap)
+    {
+        for (int i = 0; i < apartmentList.Count; i++)
+            if (apartmentList[i].id == ap.id)
+            {
+                apartmentList[i] = new Apartment(ap);
+                return;
+            }
+    }
+
     void DisplayApartments(List<Apartment> apartments)
     {
+        ClearApartments();
+
         for (int i = 0; i < apartments.Count; i++)
         {
             ApartmentUI apUI = Instantiate(prefab, apartmentHolder).GetComponent<ApartmentUI>();
