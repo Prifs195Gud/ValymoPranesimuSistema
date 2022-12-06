@@ -14111,10 +14111,10 @@ MonoBehaviour:
     - key: FAQ
       text: "Q: How to choose apartment booking platform? \nA: Apartment booking
         platform is set by clicking the triple square and plus button in the toolbar.
-        You can choose to connect to either your Airbnb or Booking.com account. \nQ:
+        You can choose to connect to either your Airbnb or Booking.com account. \n\nQ:
         How can I change the language of the app? \nA: To change app language you
         have to click on the settings button in the toolbar. Settings tab will be
-        opened and you will have the option to change system language there. \nQ:
+        opened and you will have the option to change system language there. \n\nQ:
         How to confirm that I have finished cleaning the apartment? \nA: Firstly,
         you need to find the specific apartment in the list. To do that you can use
         sorting and filtering  options that are given in the toolbar. After finding
@@ -14132,10 +14132,10 @@ MonoBehaviour:
       text: "Q: Kaip pasirinkti nuomos platform\u0105? \nA: Nuomos platform\u0105
         galima pasirinkti paspaudus trij\u0173 kvadrat\u0117li\u0173 ir pliusiuko
         mygtuk\u0105 vir\u0161utiniame meniu. Galima prisijungti prie savo Airbnb
-        arba Booking.com paskyros. \nQ: Kaip galiu pakeisti program\u0117l\u0117s
+        arba Booking.com paskyros. \n\nQ: Kaip galiu pakeisti program\u0117l\u0117s
         kalb\u0105? \nA: Norint pakeisti program\u0117l\u0117s kalb\u0105, reikia
         paspausti nustatym\u0173 mygtuk\u0105 vir\u0161utiniame meniu. Atsidariusiame
-        nustatym\u0173 lange yra galimyb\u0117 pasikeisti sistemos kalb\u0105. \nQ:
+        nustatym\u0173 lange yra galimyb\u0117 pasikeisti sistemos kalb\u0105. \n\nQ:
         Kaip patvirtinti, kad i\u0161valiau b\u016Bst\u0105? \nA: Pirmiausia reikia
         pasirinkti specifin\u012F b\u016Bst\u0105 s\u0105ra\u0161e. Kad tai atlikti,
         galima pasitelkti rikiavimo ir filtravimo funkcijomis, kurios pasiekiamos
