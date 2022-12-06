@@ -2598,7 +2598,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1827595926}
+        m_TargetAssemblyTypeName: LanguageManager, Assembly-CSharp
+        m_MethodName: ApplyLanguage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &370016229
 MonoBehaviour:
@@ -10144,6 +10156,7 @@ GameObject:
   - component: {fileID: 1487912335}
   - component: {fileID: 1487912337}
   - component: {fileID: 1487912336}
+  - component: {fileID: 1487912338}
   m_Layer: 5
   m_Name: Desc
   m_TagString: Untagged
@@ -10213,6 +10226,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487912334}
   m_CullTransparentMesh: 1
+--- !u!114 &1487912338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487912334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cecb39c3e388f4890ac80becd203fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myText: {fileID: 1487912336}
+  languageKey: SettingsDesc
 --- !u!1 &1496696279
 GameObject:
   m_ObjectHideFlags: 0
@@ -11960,6 +11987,7 @@ GameObject:
   - component: {fileID: 1620868079}
   - component: {fileID: 1620868081}
   - component: {fileID: 1620868080}
+  - component: {fileID: 1620868082}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -12029,6 +12057,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620868078}
   m_CullTransparentMesh: 1
+--- !u!114 &1620868082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620868078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cecb39c3e388f4890ac80becd203fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myText: {fileID: 1620868080}
+  languageKey: SettingsSendNot
 --- !u!1 &1632816485
 GameObject:
   m_ObjectHideFlags: 0
@@ -14018,6 +14060,93 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sortingOption: {fileID: 2087900551}
+--- !u!1 &1827595924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1827595925}
+  - component: {fileID: 1827595926}
+  m_Layer: 0
+  m_Name: LanguageManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1827595925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827595924}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2100437366}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1827595926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827595924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98d8adc1ad73ae4594abf7975381378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  languageDropdown: {fileID: 370016228}
+  languageData:
+  - languageName: English
+    languageData:
+    - key: FAQ
+      text: "Q: How to choose apartment booking platform? \nA: Apartment booking
+        platform is set by clicking the triple square and plus button in the toolbar.
+        You can choose to connect to either your Airbnb or Booking.com account. \nQ:
+        How can I change the language of the app? \nA: To change app language you
+        have to click on the settings button in the toolbar. Settings tab will be
+        opened and you will have the option to change system language there. \nQ:
+        How to confirm that I have finished cleaning the apartment? \nA: Firstly,
+        you need to find the specific apartment in the list. To do that you can use
+        sorting and filtering  options that are given in the toolbar. After finding
+        the required apartment you just simply click on it and then click confirmation
+        button. "
+    - key: SettingsDesc
+      text: 'Language:'
+    - key: SettingsSendNot
+      text: Send notification
+    - key: Back
+      text: Back
+  - languageName: Lithuanian
+    languageData:
+    - key: FAQ
+      text: "Q: Kaip pasirinkti nuomos platform\u0105? \nA: Nuomos platform\u0105
+        galima pasirinkti paspaudus trij\u0173 kvadrat\u0117li\u0173 ir pliusiuko
+        mygtuk\u0105 vir\u0161utiniame meniu. Galima prisijungti prie savo Airbnb
+        arba Booking.com paskyros. \nQ: Kaip galiu pakeisti program\u0117l\u0117s
+        kalb\u0105? \nA: Norint pakeisti program\u0117l\u0117s kalb\u0105, reikia
+        paspausti nustatym\u0173 mygtuk\u0105 vir\u0161utiniame meniu. Atsidariusiame
+        nustatym\u0173 lange yra galimyb\u0117 pasikeisti sistemos kalb\u0105. \nQ:
+        Kaip patvirtinti, kad i\u0161valiau b\u016Bst\u0105? \nA: Pirmiausia reikia
+        pasirinkti specifin\u012F b\u016Bst\u0105 s\u0105ra\u0161e. Kad tai atlikti,
+        galima pasitelkti rikiavimo ir filtravimo funkcijomis, kurios pasiekiamos
+        i\u0161 vir\u0161utinio meniu. Suradus reikiam\u0105 b\u016Bst\u0105 reikia
+        ant jo paspausti ir tada paspausti patvirtinimo mygtuk\u0105."
+    - key: SettingsDesc
+      text: 'Kalba:'
+    - key: SettingsSendNot
+      text: "Si\u0173sti prane\u0161im\u0105"
+    - key: Back
+      text: Atgal
 --- !u!1 &1859214890
 GameObject:
   m_ObjectHideFlags: 0
@@ -14363,6 +14492,7 @@ GameObject:
   - component: {fileID: 1914483932}
   - component: {fileID: 1914483934}
   - component: {fileID: 1914483933}
+  - component: {fileID: 1914483935}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -14432,6 +14562,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914483931}
   m_CullTransparentMesh: 1
+--- !u!114 &1914483935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914483931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cecb39c3e388f4890ac80becd203fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myText: {fileID: 1914483933}
+  languageKey: Back
 --- !u!1 &1950627126
 GameObject:
   m_ObjectHideFlags: 0
@@ -15026,6 +15170,7 @@ GameObject:
   - component: {fileID: 2030294892}
   - component: {fileID: 2030294894}
   - component: {fileID: 2030294893}
+  - component: {fileID: 2030294895}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -15095,6 +15240,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030294891}
   m_CullTransparentMesh: 1
+--- !u!114 &2030294895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030294891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cecb39c3e388f4890ac80becd203fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myText: {fileID: 2030294893}
+  languageKey: Back
 --- !u!1 &2039616600
 GameObject:
   m_ObjectHideFlags: 0
@@ -15106,6 +15265,7 @@ GameObject:
   - component: {fileID: 2039616601}
   - component: {fileID: 2039616603}
   - component: {fileID: 2039616602}
+  - component: {fileID: 2039616604}
   m_Layer: 5
   m_Name: Info
   m_TagString: Untagged
@@ -15184,6 +15344,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039616600}
   m_CullTransparentMesh: 1
+--- !u!114 &2039616604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039616600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cecb39c3e388f4890ac80becd203fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myText: {fileID: 2039616602}
+  languageKey: FAQ
 --- !u!1 &2040939664
 GameObject:
   m_ObjectHideFlags: 0
@@ -15571,6 +15745,7 @@ Transform:
   - {fileID: 1708795053}
   - {fileID: 1314399019}
   - {fileID: 1726530308}
+  - {fileID: 1827595925}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15809,6 +15984,7 @@ GameObject:
   - component: {fileID: 2139111905}
   - component: {fileID: 2139111907}
   - component: {fileID: 2139111906}
+  - component: {fileID: 2139111908}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -15878,6 +16054,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139111904}
   m_CullTransparentMesh: 1
+--- !u!114 &2139111908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139111904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cecb39c3e388f4890ac80becd203fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myText: {fileID: 2139111906}
+  languageKey: Back
 --- !u!222 &1213830935654067618
 CanvasRenderer:
   m_ObjectHideFlags: 0
